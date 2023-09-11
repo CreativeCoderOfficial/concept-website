@@ -1,0 +1,79 @@
+
+.more-questions-container {
+  padding-left: 10px;
+  text-align: left;
+}
+
+.more-questions-container h2,
+.more-questions-container span {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.email-h3,
+.contact-h3 {
+  font-size: 25px;
+  margin-left: 50px;
+  display: inline;
+}
+
+.email-h3 {
+  display: block;
+  margin: 5px 0px 0px 185px;
+}
+
+
+
+
+.bottom-page {
+  background: whitesmoke;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  margin-inline: -8px;
+  margin-bottom: -5px;
+  margin-top: 10%
+}
+
+.bottom-page div {
+  margin-bottom: 10px;
+}
+
+
+.top-text {
+  background-color: rgba(203, 203, 203, 0.29);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-top-left-radius: 100px;
+}
+
+.row-links {
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 20px;
+}
+
+.bottom-description {
+  background-color: rgba(203, 203, 203, 0.29);
+  margin-top: -10px;
+}
+
+.image-column {
+  width: 30%;
+} 
+
+.image-column div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 100%;
+}
+
+.column-links a {
+  font-weight: bold;
+}
+

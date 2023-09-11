@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
+.checkout-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.products {
+  flex: 1;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+}
+.checkout-form {
+  flex: 1;
+  padding: 20px;
+}
+h2 {
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.product {
+  flex: 1;
+  padding: 20px;
+  border-left: 1px solid #ccc;
+  
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+.product-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.product-details {
+  flex: 1;
+}
+.product-title {
+  font-weight: bold;
+}
+.product-price {
+  color: #007bff;
+}
+
+.item-button-container {
+  margin-left: 200px;
+  margin-top: -50px;
+}
+.item-button {
+  width: 25px;
+  padding-top: 3px;
+  border: none;
+  margin-block: 5px;
+  background-color: transparent;
+}
+
+.item-button:hover {
+  background-color: rgba(194, 192, 192, 0.345);
+}
+
+.item-button img {
+  width: 100%;
+}
+
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  margin-top: 30px;
+}
+
+
+
+input[type="text"],
+input[type="email"],
+select {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #3f95f1;
+}

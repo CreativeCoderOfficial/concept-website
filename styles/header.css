@@ -1,0 +1,97 @@
+.header {
+  position: absolute;
+  top: 2%;
+  right: 1%;
+  left: 1%;
+  overflow : hidden;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-block: 10px;
+  border-radius: 5px;
+
+  
+}
+
+
+.header a.header-logo {
+  font-weight: bold;
+  font-size: 25px;
+  background-color: aliceblue;
+}
+
+.header a.header-logo:hover {
+  background-color: rgb(221, 221, 221);
+  transition: 0.1s;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+
+.header a.log_in {
+  background-color: blueviolet;
+  color: whitesmoke;
+  font-weight: bold;
+
+}
+
+.header a.log_in:hover {
+  background-color: dodgerblue;
+  color: whitesmoke;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 10px;
+  margin-right: 10px;
+  background-color: aliceblue;
+}
+
+.header a:hover {
+background-color: rgb(221, 221, 221);
+}
+
+
+.cart-link {
+  width: 45px;
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.cart-icon {
+  width: 100%;
+}
+
+.cart-text {
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cart-quantity {
+  color: rgb(215, 117, 209);
+  font-size: 16px;
+  font-weight: 700;
+
+  position: absolute;
+  top: 18px;
+  left: 25px;
+  
+  width: 26px;
+  text-align: center;
+}

@@ -3,22 +3,22 @@ export function createHeader(cartQuantity) {
 
   if (cartQuantity === undefined) {
     headerHTML = `    
-    <div><a class="header-logo" href="concept_site.html">Company Logo</a></div>
+    <div><a class="header-logo" href="conceptsite.html">Company Logo</a></div>
   
     <div class="header-right">
   
-      <div><a href="all-cards.html">Our Cards</a></div>
+      <div><a href="allcards.html">Our Cards</a></div>
       <div><a href="about.html">How it Works</a></div>
       <div><a class="log_in" href="checkout.html">Order Now!</a></div>
     </div>`;
   }
   else {
     headerHTML = `    
-    <div><a class="header-logo" href="concept_site.html">Company Logo</a></div>
+    <div><a class="header-logo" href="conceptsite.html">Company Logo</a></div>
   
     <div class="header-right">
   
-      <div><a href="all-cards.html">Our Cards</a></div>
+      <div><a href="allcards.html">Our Cards</a></div>
       <div><a href="about.html">How it Works</a></div>
 
       <div class="cart-quantity-container">

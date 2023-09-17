@@ -1,4 +1,4 @@
-import {cart, removeFromCart, addToCart} from "../data/cart.js"
+import {cart, removeFromCart, addToCart, CartSaveToStorage} from "../data/cart.js"
 import {products} from "../data/products.js"
 
 
@@ -23,7 +23,7 @@ cart.forEach((cartItem) => {
       <div class="product-title">${matchingProduct.name}</div>
       <div class="product-price">$${(matchingProduct.priceCents / 100).toFixed(2)}</div>
 
-      <div class="product-quantity">Quantity: <b>${cartItem.quantity}</b></div>
+      <div class="product-quantity">Quantity: <b><div class="js-${matchingProduct.id}-quantity">${cartItem.quantity}</div></b></div>
 
       <div class="item-button-container">
       <div><button class="item-button js-add-button" data-product-id="${matchingProduct.id}">
@@ -50,7 +50,15 @@ document.querySelectorAll('.js-add-button')
   .forEach((addButton) => {
     addButton.addEventListener('click', () => {
       const productId = addButton.dataset.productId;
+      console.log(productId);
       addToCart(productId)
+
+      cart.forEach((item) => {
+        if (item.productId === productId) {
+          document.querySelector(`.js-${productId}-quantity`).innerHTML = item.quantity;
+        }
+      })
+      console.log(cart);
     })
 
   });
@@ -59,12 +67,25 @@ document.querySelectorAll('.js-delete-button')
   .forEach((deleteButton) => {
     deleteButton.addEventListener('click', () => {
       const productId = deleteButton.dataset.productId;
-       
+      console.log(productId)
       // const deleteHTML = removeFromCart(productId);
-
-      const container = document.querySelector(`.js-product-${productId}`) 
         
-      container.remove()
-
+      let productQuantity;
+      cart.forEach((item) => {
+        if (item.productId === productId) {
+          item.quantity -= 1;
+          productQuantity = item.quantity;     
+          if (item.quantity < 1) {
+            const container = document.querySelector(`.js-product-${productId}`);
+            container.remove()
+            removeFromCart(productId);
+          } else {
+            document.querySelector(`.js-${productId}-quantity`).innerHTML = productQuantity;
+          }
+        }
     });
+
+    CartSaveToStorage()
+    console.log(cart);
   });
+});
